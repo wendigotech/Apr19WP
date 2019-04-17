@@ -35,7 +35,7 @@ get_header(); ?>
 	    <circle cx="251" cy="433" r="16" transform="translate(-235 -417)" fill="url(#sphere-2-a)" fill-rule="evenodd"/>
 	</svg>
 </div>
-            <div class="container-sm">
+            <div class="container">
                 <div class="hero-inner">
 
 
@@ -67,11 +67,11 @@ get_header(); ?>
         </section>
 
         <section class="features section text-center">
-            <div class="container-sm"><?php the_content(); ?></div>
+            <div class="container"><?php the_content(); ?></div>
         </section>
 
         <section class="cta section">
-            <div class="container-sm">
+            <div class="container">
                 <div class="cta-inner section-inner">
                     <div class="cta-content text-center">
                         <h2 class="section-title mt-0"><?php _e( 'Stay in the know', 'Apr19' ); ?></h2>
