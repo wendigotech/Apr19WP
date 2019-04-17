@@ -35,7 +35,7 @@ get_header(); ?>
 	    <circle cx="251" cy="433" r="16" transform="translate(-235 -417)" fill="url(#sphere-2-a)" fill-rule="evenodd"/>
 	</svg>
 </div>
-            <div>
+            <div class="container">
                 <div class="hero-inner">
 
 
