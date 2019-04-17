@@ -71,11 +71,11 @@ get_header(); ?>
         <section class="cta section">
             <div class="container-sm">
                 <div class="cta-inner section-inner">
-                    <div class="cta-content text-center">
+                    <?php if ( have_posts() ) : ?><?php while ( have_posts() ) : the_post(); ?><div <?php post_class( 'cta-content text-center' ); ?> id="post-<?php the_ID(); ?>">
 
                         <?php the_content(); ?>
 
-		</div>
+		</div><?php endwhile; ?><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'Apr19' ); ?></p><?php endif; ?>
                 </div>
             </div>
         </section>
