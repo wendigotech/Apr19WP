@@ -82,14 +82,13 @@
                             <i class="fas fa-times"></i>
                         </div>
                         <div class="nav--open-title"><?php _e( 'explore', 'Apr19' ); ?></div>
-                        <?php if ( has_nav_menu( 'primary' ) ) : ?><div class="nav--open-menu"><?php
-                                    PG_Smart_Walker_Nav_Menu::$options['template'] = '<a id="{ID}" class="{CLASSES}" {ATTRS}>{TITLE}</a>';
-                                    wp_nav_menu( array(
-                                        'menu' => 'primary',
-                                        'container' => '',
-                                        'items_wrap' => '<div class="nav--open-menu %2$s" id="%1$s">%3$s</div>',
-                                        'walker' => new PG_Smart_Walker_Nav_Menu()
-                                ) ); ?></div><?php endif; ?>
+                        <?php if ( has_nav_menu( 'primary' ) ) : ?><?php wp_nav_menu( array(
+                                    'menu' => 'primary',
+                                    'menu_class' => 'nav--open-menu',
+                                    'container' => '',
+                                    'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
+                                    'walker' => new wp_bootstrap4_navwalker()
+                            ) ); ?><?php endif; ?>
                     </div>
             </div>
         </header>
