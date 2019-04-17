@@ -45,18 +45,18 @@ get_header(); ?>
                     <div class="container">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <h1><?php the_title(); ?></h1> 
-                                        <?php the_content(); ?> 
+                                        <h1><?php bloginfo( 'name' ); ?></h1> 
+                                        <p><?php bloginfo( 'description' ); ?></p> 
                                     </div>
                                 </div><div class="row">
                                     <?php
                                         $slider_args = array(
                                             'category_name' => 'slider',
                                             'nopaging' => true,
-                                            'order' => 'ASC',
+                                            'order' => 'DESC',
                                             'orderby' => 'date'
                                         )
-                                    ?><?php $slider = new WP_Query( $slider_args ); ?><?php if ( $slider->have_posts() ) : ?><?php while ( $slider->have_posts() ) : $slider->the_post(); ?><div class="col-md-4">
+                                    ?><?php $slider = new WP_Query( $slider_args ); ?><?php if ( $slider->have_posts() ) : ?><?php $slider_item_number = 0; ?><?php while ( $slider->have_posts() && $slider_item_number++ < 1 ) : $slider->the_post(); ?><div class="col-md-4">
                                         <h3><?php the_title(); ?></h3><?php the_content(); ?> 
 
                                     </div><?php endwhile; ?><?php wp_reset_postdata(); ?><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'Apr19' ); ?></p><?php endif; ?>
