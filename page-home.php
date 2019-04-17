@@ -35,7 +35,7 @@ get_header(); ?>
 	    <circle cx="251" cy="433" r="16" transform="translate(-235 -417)" fill="url(#sphere-2-a)" fill-rule="evenodd"/>
 	</svg>
 </div>
-            <div class="container">
+            <div class="container-sm">
                 <div class="hero-inner">
 
 
@@ -44,7 +44,7 @@ get_header(); ?>
 
                     <div class="container">
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-12">
                                         <h1><?php bloginfo( 'name' ); ?></h1> 
                                         <p><?php bloginfo( 'description' ); ?></p> 
                                     </div>
@@ -56,7 +56,7 @@ get_header(); ?>
                                             'order' => 'DESC',
                                             'orderby' => 'date'
                                         )
-                                    ?><?php $slider = new WP_Query( $slider_args ); ?><?php if ( $slider->have_posts() ) : ?><?php $slider_item_number = 0; ?><?php while ( $slider->have_posts() && $slider_item_number++ < 1 ) : $slider->the_post(); ?><div class="col-md-4">
+                                    ?><?php $slider = new WP_Query( $slider_args ); ?><?php if ( $slider->have_posts() ) : ?><?php while ( $slider->have_posts() ) : $slider->the_post(); ?><div class="col-md-12">
                                         <h3><?php the_title(); ?></h3><?php the_content(); ?> 
 
                                     </div><?php endwhile; ?><?php wp_reset_postdata(); ?><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'Apr19' ); ?></p><?php endif; ?>
@@ -67,11 +67,11 @@ get_header(); ?>
         </section>
 
         <section class="features section text-center">
-            <div class="container"><?php the_content(); ?></div>
+            <div class="container-sm"><?php the_content(); ?></div>
         </section>
 
         <section class="cta section">
-            <div class="container">
+            <div class="container-sm">
                 <div class="cta-inner section-inner">
                     <div class="cta-content text-center">
                         <h2 class="section-title mt-0"><?php _e( 'Stay in the know', 'Apr19' ); ?></h2>
