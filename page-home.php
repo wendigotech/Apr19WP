@@ -73,7 +73,7 @@ get_header(); ?>
                 <div class="cta-inner section-inner">
                     <div class="cta-content text-center">
 
-                        <?php if ( have_posts() ) : ?><?php while ( have_posts() ) : the_post(); ?><p <?php post_class( 'section-paragraph' ); ?> id="post-<?php the_ID(); ?>"><?php _e( 'Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.', 'Apr19' ); ?></p><?php endwhile; ?><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'Apr19' ); ?></p><?php endif; ?>
+                        <?php the_content(); ?>
 
 		</div>
                 </div>
