@@ -76,9 +76,7 @@ get_header(); ?>
                                                         </defs>
                                                         <g fill="none" fill-rule="evenodd">
                                                             <rect fill="url(#browser-a)" width="800" height="450" rx="4"></rect>
-                                                            <path fill="url(#browser-b)" d="M60 82h122v320H60zM213 82h1v320h-1zM399 82h1v320h-1zM585 82h1v320h-1zM246 82h122v320H246zM432 82h122v320H432zM618 82h122v320H618z">
-                                                                <?php the_content(); ?>
-                                                            </path>
+                                                            <?php the_content(); ?>
                                                             <circle fill="#D15680" cx="24" cy="16" r="4"></circle>
                                                             <circle fill="#F2D084" cx="40" cy="16" r="4"></circle>
                                                             <circle fill="#84F293" cx="56" cy="16" r="4"></circle>
