@@ -37,24 +37,57 @@ get_header(); ?>
 </div>
             <div class="container-sm">
                 <div class="hero-inner">
-                    <h1 class="hero-title mt-0 is-revealing"><?php bloginfo( 'name' ); ?></h1>
-                    <p class="hero-paragraph is-revealing"><?php bloginfo( 'description' ); ?></p>
+
+
 
                     <div class="hero-browser">
 
                     <div class="container">
                                 <div class="row">
+                                    <div class="col-md-4">
+                                        <h1><?php the_title(); ?></h1> 
+                                        <?php the_content(); ?> 
+                                    </div>
+                                </div><div class="row">
                                     <?php
                                         $slider_args = array(
                                             'category_name' => 'slider',
-                                            'post_type' => 'slider',
                                             'nopaging' => true,
                                             'order' => 'ASC',
                                             'orderby' => 'date'
                                         )
                                     ?><?php $slider = new WP_Query( $slider_args ); ?><?php if ( $slider->have_posts() ) : ?><?php while ( $slider->have_posts() ) : $slider->the_post(); ?><div class="col-md-4">
-                                        <h3><?php the_title(); ?></h3> 
-                                        <?php the_content(); ?> 
+                                        <h3><?php the_title(); ?></h3><div class="hero-browser">
+                                                    <svg width="800" height="450" viewbox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+                                                        <defs>
+                                                            <lineargradient x1="50%" y1="0%" x2="50%" y2="100%" id="browser-a">
+                                                                <stop stop-color="#474452" offset="0%"></stop>
+                                                                <stop stop-color="#363342" offset="100%"></stop>
+                                                            </linearGradient>
+                                                            <lineargradient x1="100%" y1="0%" x2="0%" y2="100%" id="browser-b">
+                                                                <stop stop-color="#302D3B" stop-opacity=".24" offset="0%"></stop>
+                                                                <stop stop-color="#302D3B" offset="100%"></stop>
+                                                            </linearGradient>
+                                                            <lineargradient x1="100%" y1="-12.816%" x2="0%" y2="-12.816%" id="browser-c">
+                                                                <stop stop-color="#5A5667" stop-opacity="0" offset="0%"></stop>
+                                                                <stop stop-color="#5A5667" offset="50.045%"></stop>
+                                                                <stop stop-color="#5A5667" stop-opacity="0" offset="100%"></stop>
+                                                            </linearGradient>
+                                                        </defs>
+                                                        <g fill="none" fill-rule="evenodd">
+                                                            <rect fill="url(#browser-a)" width="800" height="450" rx="4"></rect>
+                                                            <path fill="url(#browser-b)" d="M60 82h122v320H60zM213 82h1v320h-1zM399 82h1v320h-1zM585 82h1v320h-1zM246 82h122v320H246zM432 82h122v320H432zM618 82h122v320H618z">
+                                                                <?php the_content(); ?>
+                                                            </path>
+                                                            <circle fill="#D15680" cx="24" cy="16" r="4"></circle>
+                                                            <circle fill="#F2D084" cx="40" cy="16" r="4"></circle>
+                                                            <circle fill="#84F293" cx="56" cy="16" r="4"></circle>
+                                                            <path fill="#5D5B6E" d="M756 14h24v4h-24z"></path>
+                                                            <path fill="url(#browser-c)" d="M47 32h706v2H47z"></path>
+                                                        </g>
+                                                    </svg>
+                                                </div> 
+
                                     </div><?php endwhile; ?><?php wp_reset_postdata(); ?><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'Apr19' ); ?></p><?php endif; ?>
                                 </div>
                             </div></div>

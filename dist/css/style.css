@@ -1332,7 +1332,7 @@ label {
 }
 
 .hero-disk-4 {
-    bottom: 25px;
+    bottom: -250px;
     left: -106px;
 }
 
@@ -1469,7 +1469,7 @@ label {
     }
 
     .hero-disk-4 {
-        bottom: 53px;
+        bottom: -250px;
         left: 31px;
     }
 
@@ -1737,4 +1737,8 @@ main {
         order: 1;
         margin-bottom: 0;
     }
+}
+
+svg g rect {
+    opacity: 0.6;
 }

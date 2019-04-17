@@ -14,12 +14,13 @@ a:hover {
 }
 
 .navbar--container {
-    top: 15%;
     background: #040404;
     height: auto;
     width: 90px;
     -webkit-box-shadow: 2px 2px 36px #4020e1;
     box-shadow: 2px 2px 36px #4020e1;
+    right: 3%;
+    top: 0;
 }
 
 .navbar--icon {
