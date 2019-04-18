@@ -26,15 +26,15 @@ a {
 .navbar--container {
     background: $white;
     height: auto;
-    width: 90px;
+    width: 50px;
     box-shadow: 2px 2px 36px #4020e1;
     right: 3%;
     top: 0;
 }
 
 .navbar--icon {
-    margin-top: 25px;
-    margin-left: 25px;
+    margin-top: 5px;
+    margin-left: 5%;
     font-size: 3em;
 
     &:hover {
@@ -44,8 +44,8 @@ a {
 }
 
 .navbar--title {
-    margin-left: 5px;
-    margin-top: 30px;
+    margin-left: -35%;
+    margin-top: -15px;
 
     h4 {
         writing-mode: vertical-rl;
@@ -54,6 +54,7 @@ a {
         text-transform: uppercase;
         font-size: 0.9em;
         color: #3f20e0;
+        text-shadow: 2px 3px 10px;
     }
 }
 

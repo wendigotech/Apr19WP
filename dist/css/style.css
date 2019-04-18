@@ -1271,7 +1271,7 @@ label {
 
 .hero {
     position: relative;
-    padding-top: 48px;
+    padding-top: 1px;
 }
 
 .hero-disk,
@@ -1443,7 +1443,7 @@ label {
 
 @media (min-width: 641px){
     .hero {
-        padding-top: 88px;
+        padding-top: 1px;
         padding-bottom: 24px;
     }
 
