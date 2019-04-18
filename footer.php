@@ -57,13 +57,16 @@
 							</svg>
                         </a>
                     </div>
-                    <?php if ( has_nav_menu( 'social' ) ) : ?><?php wp_nav_menu( array(
-                                    'menu' => 'social',
-                                    'menu_class' => 'footer-links list-reset',
-                                    'container' => '',
-                                    'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
-                                    'walker' => new wp_bootstrap4_navwalker()
-                            ) ); ?><?php endif; ?>
+                    <?php if ( has_nav_menu( 'social' ) ) : ?><ul class="footer-links list-reset"><?php
+                                    PG_Smart_Walker_Nav_Menu::$options['template'] = '<li id="{ID}" class="{CLASSES}">
+                                                                <a {ATTRS}>{TITLE}</a>
+                                                            </li>';
+                                    wp_nav_menu( array(
+                                        'menu' => 'social',
+                                        'container' => '',
+                                        'items_wrap' => '<ul class="footer-links list-reset %2$s" id="%1$s">%3$s</ul>',
+                                        'walker' => new PG_Smart_Walker_Nav_Menu()
+                                ) ); ?></ul><?php endif; ?>
                     <ul class="footer-social-links list-reset">
                         <li>
                             <a href="#">
