@@ -20,7 +20,7 @@ a:hover {
     -webkit-box-shadow: 2px 2px 36px #4020e1;
     box-shadow: 2px 2px 36px #4020e1;
     right: 3%;
-    top: 0;
+    top: 10px;
 }
 
 .navbar--icon {
