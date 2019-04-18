@@ -103,6 +103,70 @@ function Apr19_customize_register( $wp_customize ) {
 
     /* Pinegrow generated Customizer Controls Begin */
 
+    $wp_customize->add_section( 'footer_section', array(
+        'title' => __( 'Footer Controls', 'Apr19' )
+    ));
+    $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
+
+    $wp_customize->add_setting( 'footer_img1', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img1', array(
+        'label' => __( 'Image 1', 'Apr19' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_section'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_img2', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img2', array(
+        'label' => __( 'Image 2', 'Apr19' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_section'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_img3', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img3', array(
+        'label' => __( 'Image 3', 'Apr19' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_section'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_img4', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img4', array(
+        'label' => __( 'Image 4', 'Apr19' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_section'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_text', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_text', array(
+        'label' => __( 'Footer Text', 'Apr19' ),
+        'type' => 'textarea',
+        'section' => 'footer_section'
+    ));
+
     /* Pinegrow generated Customizer Controls End */
 
 }
@@ -152,6 +216,7 @@ function pgwp_sanitize_placeholder($input) { return $input; }
  */
 /* Pinegrow generated Include Resources Begin */
 require_once "inc/wp_smart_navwalker.php";
+require_once "inc/bootstrap/wp_bootstrap4_navwalker.php";
 
     /* Pinegrow generated Include Resources End */
 ?>
