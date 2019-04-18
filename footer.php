@@ -62,7 +62,7 @@
                                                                 <a {ATTRS}>{TITLE}</a>
                                                             </li>';
                                     wp_nav_menu( array(
-                                        'menu' => 'social',
+                                        'menu' => 'secondary',
                                         'container' => '',
                                         'items_wrap' => '<ul class="footer-links list-reset %2$s" id="%1$s">%3$s</ul>',
                                         'walker' => new PG_Smart_Walker_Nav_Menu()
