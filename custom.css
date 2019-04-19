@@ -3,14 +3,12 @@ a {
     color: #3f20df;
 }
 
-a:hover {
-    background: #3f20df;
-    color: #ffffff;
-    -webkit-transition: all 800ms;
-    -o-transition: all 800ms;
-    transition: all 800ms;
-}
-
+/*&:hover {
+        background: $main;
+        color: $dark;
+        transition: all 800ms;
+    }
+}*/
 .sticky {
     position: fixed;
     z-index: 10;
@@ -101,7 +99,6 @@ a:hover {
     -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
-    margin-top: 30px;
 }
 
 .nav--open-menu a {
@@ -120,4 +117,12 @@ a:hover {
     -o-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
     opacity: 0;
+}
+
+.nav--open-menu a:hover {
+    background: #3f20df;
+    color: #ffffff;
+    -webkit-transition: all 800ms;
+    -o-transition: all 800ms;
+    transition: all 800ms;
 }

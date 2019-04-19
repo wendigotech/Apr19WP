@@ -11,14 +11,14 @@ $ease-slow: all .4s ease-out;
 a {
     text-decoration: none;
     color: $main;
+}
 
-    &:hover {
+/*&:hover {
         background: $main;
         color: $dark;
         transition: all 800ms;
     }
-}
-
+}*/
 .sticky {
     position: fixed;
     z-index: 10;
@@ -97,7 +97,6 @@ a {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 30px;
 
     a {
         font-size: 1.5em;
@@ -112,4 +111,10 @@ a {
     transform: translateX(-300px);
     transition: $ease-slow;
     opacity: 0;
+}
+
+.nav--open-menu a:hover {
+    background: $main;
+    color: $dark;
+    transition: all 800ms;
 }
