@@ -65,7 +65,7 @@ a:hover {
 
 .nav--open-icon {
     text-align: right;
-    padding: 20px;
+    padding: 15px;
 }
 
 .nav--open-icon i {
@@ -84,7 +84,6 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: .2em;
     text-align: center;
-    margin-top: 35%;
 }
 
 .nav--open-menu {
@@ -103,7 +102,7 @@ a:hover {
 }
 
 .nav--open-menu a {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 100;
     padding: 15px 0;
     font-family: Heebo;

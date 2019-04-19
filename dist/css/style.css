@@ -1234,7 +1234,7 @@ label {
 
 .site-header {
     position: relative;
-    padding: 24px 0;
+    padding: 5px 0;
 }
 
 .site-header-inner {
@@ -1741,4 +1741,8 @@ main {
 
 svg g rect {
     opacity: 0.6;
+}
+
+a.h4a {
+    list-style-type: circle;
 }
