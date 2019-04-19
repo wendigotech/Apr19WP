@@ -75,7 +75,10 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"><?php echo get_theme_mod( 'footer_img2_link', '<img src="http://pinegrow.com/placeholders/img15.jpg" width="80" cms-editable="footer_img2" cms-editable-label="Image 2" cms-editable-type="image" cms-editable-section="footer_section">' ); ?></a>
+                            <a href="<?php echo get_theme_mod( 'footer_img2_link', '#' ); ?>">
+                                <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img2', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" width="80">
+                                
+                            </a>
                         </li>
                         <li>
                             <a href="#"><img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img3', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" width="80">
