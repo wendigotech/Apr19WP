@@ -120,17 +120,17 @@ function Apr19_customize_register( $wp_customize ) {
         'section' => 'footer_section'
     ) ) );
 
-    $wp_customize->add_setting( 'footer_img2', array(
+    $wp_customize->add_setting( 'footer_img2_link', array(
         'type' => 'theme_mod',
+        'default' => '<img src="http://pinegrow.com/placeholders/img15.jpg" width="80" cms-editable="footer_img2" cms-editable-label="Image 2" cms-editable-type="image" cms-editable-section="footer_section">',
         'sanitize_callback' => $pgwp_sanitize
     ));
 
-    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img2', array(
-        'label' => __( 'Image 2', 'Apr19' ),
-        'type' => 'media',
-        'mime_type' => 'image',
+    $wp_customize->add_control( 'footer_img2_link', array(
+        'label' => __( 'Image 2 Link', 'Apr19' ),
+        'type' => 'text',
         'section' => 'footer_section'
-    ) ) );
+    ));
 
     $wp_customize->add_setting( 'footer_img3', array(
         'type' => 'theme_mod',
