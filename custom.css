@@ -6,6 +6,8 @@ a {
 a:hover {
     background: #3f20df;
     color: #ffffff;
+    -webkit-clip-path: polygon(0% 0%, 100% 15px, 100% 100%, 0% calc(100% - 15px));
+    clip-path: polygon(0% 0%, 100% 15px, 100% 100%, 0% calc(100% - 15px));
 }
 
 .sticky {
