@@ -83,7 +83,7 @@
                         </div>
                         <div class="nav--open-title"><?php _e( 'explore', 'Apr19' ); ?></div>
                         <?php if ( has_nav_menu( 'primary' ) ) : ?><div class="nav--open-menu"><?php
-                                    PG_Smart_Walker_Nav_Menu::$options['template'] = '<a id="{ID}" class="{CLASSES}" {ATTRS}>{TITLE}</a>';
+                                    PG_Smart_Walker_Nav_Menu::$options['template'] = '<a class="text-bg-fx {CLASSES}" id="{ID}" {ATTRS}>{TITLE}</a>';
                                     wp_nav_menu( array(
                                         'menu' => 'primary',
                                         'container' => '',
