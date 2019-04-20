@@ -35,7 +35,13 @@
 				</svg>
 			</div>
             <div class="container">
-                <div class="site-footer-inner has-top-divider">
+                <div class="row">
+                        <div class="col-md-4"> 
+                            <?php if ( is_active_sidebar( 'my1' ) ) : ?>
+                                <?php dynamic_sidebar( 'my1' ); ?>
+                            <?php endif; ?> 
+                        </div>
+                    </div><div class="site-footer-inner has-top-divider">
                     <div class="brand footer-brand">
                         <a href="#">
 							<svg width="70" height="70" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
