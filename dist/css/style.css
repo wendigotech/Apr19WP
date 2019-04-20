@@ -1320,8 +1320,8 @@ label {
 }
 
 .hero-disk-3 {
-    bottom: 112px;
-    left: -186px;
+    top: 30%;
+    left: 500px;
 }
 
 .hero-disk-3 svg {
@@ -1448,7 +1448,7 @@ label {
     }
 
     .hero-disk svg {
-        width: 600px;
+        width: 400px;
     }
 
     .hero-sphere {
@@ -1464,8 +1464,8 @@ label {
     }
 
     .hero-disk-3 {
-        top: 50%;
-        left: 600px;
+        top: 30%;
+        left: 500px;
     }
 
     .hero-disk-4 {
