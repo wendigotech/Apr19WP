@@ -36,8 +36,8 @@
 			</div>
             <div class="container">
                 <div class="site-footer-inner has-top-divider">
-                    <div class="brand footer-brand" href="<?php echo esc_url( get_home_url() ); ?>">
-                        <a href="#">
+                    <div class="brand footer-brand">
+                        <a href="<?php echo esc_url( get_home_url() ); ?>">
 							<svg width="70" height="70" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 								<title><?php _e( 'Florence', 'Apr19' ); ?></title>
 								<defs>

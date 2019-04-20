@@ -49,7 +49,7 @@
                 <div class="site-header-inner">
                     <div class="brand header-brand">
                         <h1 class="m-0">
-                            <a href="#">
+                            <a href="<?php echo esc_url( get_home_url() ); ?>">
 								<svg width="70" height="70" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 									<title><?php _e( 'Florence', 'Apr19' ); ?></title>
 								    <defs>
@@ -64,7 +64,7 @@
 								    </defs>
 								    <g fill="none" fill-rule="evenodd">
 								        <path d="M16 8h6a2 2 0 0 1 2 2v6h-6a2 2 0 0 1-2-2V8z" fill="url(#logo-a)"/>
-								        <path d="M16 0v8a8 8 0 1 0 8 8h8c0 8.837-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0z" fill="url(#logo-b)" href="<?php echo esc_url( get_home_url() ); ?>"/>
+								        <path d="M16 0v8a8 8 0 1 0 8 8h8c0 8.837-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0z" fill="url(#logo-b)"/>
 								    </g>
 								</svg>
                             </a>
