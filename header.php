@@ -70,9 +70,7 @@
                             </a>
                         </h1>
                     </div>
-                </div><?php if ( is_active_sidebar( 'sidebar1' ) ) : ?><div class="col-md-4">
-                            <?php dynamic_sidebar( 'sidebar1' ); ?>
-                        </div><?php endif; ?><div class="navbar--container sticky">
+                </div><?php if ( is_active_sidebar( 'sidebar1' ) ) : ?><div class="col-md-4"><?php dynamic_sidebar( 'sidebar1' ); ?></div><?php endif; ?><div class="navbar--container sticky">
                         <div class="navbar--icon">
                             <i class="fas fa-align-justify fa-xs"></i>
                         </div><div class="navbar--title">
