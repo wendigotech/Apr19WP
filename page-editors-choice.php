@@ -42,7 +42,7 @@ get_header(); ?>
 
                     <div class="hero-browser">
 
-                    <div class="container">
+                    <div class="container" style="padding-top: 10em;">
                                 <div class="row">
                                     <?php
                                         $choice_args = array(
