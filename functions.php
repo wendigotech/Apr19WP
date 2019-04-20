@@ -90,10 +90,10 @@ function Apr19_widgets_init() {
     /* Pinegrow generated Register Sidebars Begin */
 
     register_sidebar( array(
-        'name' => __( 'My widget1', 'Apr19' ),
-        'id' => 'my_widget1',
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget' => '</li>',
+        'name' => __( 'Sidebar1', 'Apr19' ),
+        'id' => 'sidebar1',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
         'before_title' => '<h3 class="widgettitle">',
         'after_title' => '</h3>'
     ) );
