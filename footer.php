@@ -36,7 +36,9 @@
 			</div>
             <div class="container">
                 <div class="site-footer-inner has-top-divider">
-                    <div class="brand footer-brand">
+                    <div class="row">
+                            <p><?php _e( 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'Apr19' ); ?></p>
+                        </div><div class="brand footer-brand">
                         <a href="#">
 							<svg width="70" height="70" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 								<title><?php _e( 'Florence', 'Apr19' ); ?></title>
