@@ -45,7 +45,7 @@ get_header(); ?>
                     <div class="container">
                                 <div class="row">
                                     <?php if ( have_posts() ) : ?><?php while ( have_posts() ) : the_post(); ?><div class="col-md-12">
-                                        <h3><?php the_title(); ?></h3><p><?php the_content(); ?></p> 
+                                        <h3><?php the_title(); ?></h3><?php the_content(); ?> 
 
                                     </div><?php endwhile; ?><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'Apr19' ); ?></p><?php endif; ?>
                                 </div>
