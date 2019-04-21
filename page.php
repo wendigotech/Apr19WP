@@ -44,18 +44,6 @@ get_header(); ?>
 
                     <div class="container">
                                 <div class="row">
-                                    <?php
-                                        $choice_args = array(
-                                            'category_name' => 'choice',
-                                            'nopaging' => true,
-                                            'order' => 'DESC',
-                                            'orderby' => 'date'
-                                        )
-                                    ?><?php $choice = new WP_Query( $choice_args ); ?><?php if ( $choice->have_posts() ) : ?><?php while ( $choice->have_posts() ) : $choice->the_post(); ?><div class="col-md-12">
-                                        <h3><?php the_title(); ?></h3><?php the_content(); ?> 
-
-                                    </div><?php endwhile; ?><?php wp_reset_postdata(); ?><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'Apr19' ); ?></p><?php endif; ?>
-                                </div><div class="row">
                                     <?php if ( have_posts() ) : ?><?php while ( have_posts() ) : the_post(); ?><div class="col-md-12">
                                         <h3><?php the_title(); ?></h3><?php the_content(); ?> 
 
