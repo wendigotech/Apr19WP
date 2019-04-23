@@ -44,7 +44,7 @@ get_header(); ?>
 
                     <div class="container">
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-4">
                                         <h1><?php the_title(); ?></h1> 
                                         <?php the_content(); ?> 
                                     </div>
@@ -56,7 +56,7 @@ get_header(); ?>
                                             'order' => 'ASC',
                                             'orderby' => 'date'
                                         )
-                                    ?><?php $slider = new WP_Query( $slider_args ); ?><?php if ( $slider->have_posts() ) : ?><?php while ( $slider->have_posts() ) : $slider->the_post(); ?><div class="col-md-12">
+                                    ?><?php $slider = new WP_Query( $slider_args ); ?><?php if ( $slider->have_posts() ) : ?><?php while ( $slider->have_posts() ) : $slider->the_post(); ?><div class="col-md-4">
                                         <h3><?php the_title(); ?></h3><?php the_content(); ?> 
 
                                     </div><?php endwhile; ?><?php wp_reset_postdata(); ?><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'Apr19' ); ?></p><?php endif; ?>

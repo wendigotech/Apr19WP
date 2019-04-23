@@ -355,7 +355,7 @@ html {
 }
 
 body {
-    color: #708396;
+    color: #228bf3;
     font-size: 1rem;
 }
 
@@ -539,12 +539,14 @@ h2,
 .h2 {
     margin-top: 48px;
     margin-bottom: 16px;
+    font-family: Titillium Web;
 }
 
 h3,
 .h3 {
     margin-top: 30px;
     margin-bottom: 20px;
+    font-family: Titillium Web;
 }
 
 h4,
@@ -560,6 +562,7 @@ h6,
 p {
     margin-top: 0;
     margin-bottom: 24px;
+    font-family: Titillium Web;
 }
 
 dfn,
@@ -795,6 +798,7 @@ label {
 
 .mt-0 {
     margin-top: 0;
+    font-family: Titillium Web;
 }
 
 .mr-0 {
@@ -1235,6 +1239,7 @@ label {
 .site-header {
     position: relative;
     padding: 5px 0;
+    margin-top: 142px;
 }
 
 .site-header-inner {
@@ -1296,8 +1301,8 @@ label {
 }
 
 .hero-disk-1 {
-    top: 76px;
-    right: -140px;
+    top: 90%;
+    right: 50%;
 }
 
 .hero-disk-1 svg {
@@ -1308,8 +1313,8 @@ label {
 }
 
 .hero-disk-2 {
-    top: -70px;
-    right: -88px;
+    top: 1%;
+    right: 10%;
 }
 
 .hero-disk-2 svg {
@@ -1332,8 +1337,8 @@ label {
 }
 
 .hero-disk-4 {
-    bottom: -50px;
-    left: -106px;
+    bottom: 1%;
+    left: 28%;
 }
 
 .hero-disk-4 svg {
@@ -1349,8 +1354,8 @@ label {
 }
 
 .hero-sphere-2 {
-    bottom: 591px;
-    left: 50px;
+    bottom: 99%;
+    left: 10%;
 }
 
 @-webkit-keyframes disk-rotation{
@@ -1456,21 +1461,21 @@ label {
     }
 
     .hero-disk-1 {
-        right: -260px;
+        right: 32%;
     }
 
     .hero-disk-2 {
-        top: -100px;
+        top: -65%;
     }
 
     .hero-disk-3 {
-        top: 30%;
-        left: 500px;
+        top: 95%;
+        left: 65%;
     }
 
     .hero-disk-4 {
-        top: 50px;
-        left: 31px;
+        top: 42%;
+        left: 0%;
     }
 
     .hero-title {
@@ -1548,11 +1553,11 @@ label {
 }
 
 .is-boxed {
-    background: #181818;
+    background: rgba(212, 194, 194, 0.98);
 }
 
 .body-wrap {
-    background: #040404;
+    background: rgba(216, 213, 213, 0.96);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -1561,8 +1566,10 @@ label {
 
 .boxed-container {
     max-width: 1440px;
-    margin: 0 auto;
     box-shadow: 0 16px 48px rgba(4,4,4,0.5);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
 }
 
 main {
@@ -1646,8 +1653,8 @@ main {
 }
 
 .footer-sphere-1 {
-    left: 390px;
-    bottom: 110px;
+    left: 20%;
+    bottom: 90%;
 }
 
 .site-footer-inner {
@@ -1701,13 +1708,13 @@ main {
     }
 
     .footer-disk-1 {
-        bottom: -170px;
-        left: 352px;
+        bottom: 2%;
+        left: -34%;
     }
 
     .footer-disk-2 {
-        bottom: 0;
-        right: -285px;
+        bottom: 150%;
+        right: -34%;
     }
 
     .site-footer-inner {

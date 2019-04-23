@@ -47,50 +47,57 @@
 			</div>
             <div class="container">
                 <div class="site-header-inner">
-                    <div class="brand header-brand">
-                        <h1 class="m-0">
-                            <a href="<?php echo esc_url( get_home_url() ); ?>">
-								<svg width="70" height="70" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-									<title><?php _e( 'Florence', 'Apr19' ); ?></title>
-								    <defs>
-								        <lineargradient x1="100%" y1="0%" x2="0%" y2="100%" id="logo-a">
-								            <stop stop-color="#FFF" stop-opacity=".48" offset="0%"/>
-								            <stop stop-color="#FFF" offset="100%"/>
-								        </linearGradient>
-								        <lineargradient x1="21.021%" y1="8.197%" y2="50%" id="logo-b">
-								            <stop stop-color="#3217BB" offset="0%"/>
-								            <stop stop-color="#D15680" offset="100%"/>
-								        </linearGradient>
-								    </defs>
-								    <g fill="none" fill-rule="evenodd">
-								        <path d="M16 8h6a2 2 0 0 1 2 2v6h-6a2 2 0 0 1-2-2V8z" fill="url(#logo-a)"/>
-								        <path d="M16 0v8a8 8 0 1 0 8 8h8c0 8.837-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0z" fill="url(#logo-b)"/>
-								    </g>
-								</svg>
-                            </a>
-                        </h1>
-                    </div>
-                </div><?php if ( is_active_sidebar( 'sidebar1' ) ) : ?><div class="col-md-4"><?php dynamic_sidebar( 'sidebar1' ); ?></div><?php endif; ?><div class="navbar--container sticky">
-                        <div class="navbar--icon">
-                            <i class="fas fa-align-justify fa-xs"></i>
-                        </div><div class="navbar--title">
-                            <h4><?php _e( 'navigation', 'Apr19' ); ?></h4>
-                        </div>
-                        
-                    </div><div class="nav--open close sticky">
-                        <div class="nav--open-icon">
-                            <i class="fas fa-times"></i>
-                        </div>
-                        
-                        <?php if ( has_nav_menu( 'primary' ) ) : ?><div class="nav--open-menu"><?php
-                                    PG_Smart_Walker_Nav_Menu::$options['template'] = '<a class="text-bg-fx {CLASSES}" id="{ID}" {ATTRS}>{TITLE}</a>';
-                                    wp_nav_menu( array(
-                                        'menu' => 'primary',
-                                        'container' => '',
-                                        'items_wrap' => '<div class="nav--open-menu %2$s" id="%1$s">%3$s</div>',
-                                        'walker' => new PG_Smart_Walker_Nav_Menu()
-                                ) ); ?></div><?php endif; ?>
-                    </div>
+                    <nav class="navbar navbar-expand-lg fixed-top navbar-light">                              
+
+                            <div class="brand header-brand">
+                                <h1 class="m-0"> <a href="<?php echo esc_url( get_home_url() ); ?>">
+                                        <svg width="70" height="70" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                            <title>
+                                                <?php _e( 'Florence', 'Apr19' ); ?>
+                                            </title>
+                                            <defs>
+                                                <lineargradient x1="100%" y1="0%" x2="0%" y2="100%" id="logo-a">
+                                                    <stop stop-color="#FFF" stop-opacity=".48" offset="0%"/>
+                                                    <stop stop-color="#FFF" offset="100%"/>
+                                                </linearGradient>
+                                                <lineargradient x1="21.021%" y1="8.197%" y2="50%" id="logo-b">
+                                                    <stop stop-color="#3217BB" offset="0%"/>
+                                                    <stop stop-color="#D15680" offset="100%"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <g fill="none" fill-rule="evenodd">
+                                                <path d="M16 8h6a2 2 0 0 1 2 2v6h-6a2 2 0 0 1-2-2V8z" fill="url(#logo-a)"/>
+                                                <path d="M16 0v8a8 8 0 1 0 8 8h8c0 8.837-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0z" fill="url(#logo-b)"/>
+                                            </g>
+                                        </svg>
+                                    </a> </h1>
+                            </div>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler20" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> 
+                                <span class="navbar-toggler-icon"></span> 
+                            </button>                             
+
+                            <div class="collapse navbar-collapse" id="navbarToggler20"> 
+                                <?php if ( has_nav_menu( 'primary' ) ) : ?>
+                                    <?php wp_nav_menu( array(
+                                            'menu' => 'primary',
+                                            'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto goo',
+                                            'container' => '',
+                                            'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
+                                            'walker' => new wp_bootstrap4_navwalker()
+                                    ) ); ?>
+                                <?php endif; ?>
+                                <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                    <defs>
+                                        <filter id="goo">
+                                            <fegaussianblur in="SourceGraphic" stddeviation="10" result="blur"/> 
+                                            <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"/>
+                                            <fecomposite in="SourceGraphic" in2="goo" operator="atop"/>
+                                        </filter>
+                                    </defs>
+                                </svg>                                                                  
+                            </div>                             
+                        </nav>
+                </div><?php if ( is_active_sidebar( 'sidebar1' ) ) : ?><div class="col-md-12"><?php dynamic_sidebar( 'sidebar1' ); ?></div><?php endif; ?>
             </div>
         </header>
 
