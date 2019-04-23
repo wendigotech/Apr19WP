@@ -221,6 +221,9 @@ if ( ! function_exists( 'Apr19_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Styles Begin */
 
+    wp_deregister_style( 'bootstrap' );
+    wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', false, null, 'all');
+
     wp_deregister_style( 'style-1' );
     wp_enqueue_style( 'style-1', 'https://fonts.googleapis.com/css?family=Heebo:400,400i,700|Titillium+Web:600', false, null, 'all');
 
@@ -233,9 +236,6 @@ if ( ! function_exists( 'Apr19_enqueue_scripts' ) ) :
     wp_deregister_style( 'custom' );
     wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css', false, null, 'all');
 
-    wp_deregister_style( 'bootstrap' );
-    wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', false, null, 'all');
-
     /* Pinegrow generated Enqueue Styles End */
 
     }
@@ -247,8 +247,8 @@ function pgwp_sanitize_placeholder($input) { return $input; }
  * Resource files included by Pinegrow.
  */
 /* Pinegrow generated Include Resources Begin */
-require_once "inc/wp_smart_navwalker.php";
 require_once "inc/bootstrap/wp_bootstrap4_navwalker.php";
+require_once "inc/wp_smart_navwalker.php";
 
     /* Pinegrow generated Include Resources End */
 ?>

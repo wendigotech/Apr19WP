@@ -52,9 +52,7 @@
                             <div class="brand header-brand">
                                 <h1 class="m-0"> <a href="<?php echo esc_url( get_home_url() ); ?>">
                                         <svg width="70" height="70" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                            <title>
-                                                <?php _e( 'Florence', 'Apr19' ); ?>
-                                            </title>
+                                            <title><?php _e( 'Florence', 'Apr19' ); ?></title>
                                             <defs>
                                                 <lineargradient x1="100%" y1="0%" x2="0%" y2="100%" id="logo-a">
                                                     <stop stop-color="#FFF" stop-opacity=".48" offset="0%"/>
@@ -77,15 +75,13 @@
                             </button>                             
 
                             <div class="collapse navbar-collapse" id="navbarToggler20"> 
-                                <?php if ( has_nav_menu( 'primary' ) ) : ?>
-                                    <?php wp_nav_menu( array(
+                                <?php if ( has_nav_menu( 'primary' ) ) : ?><?php wp_nav_menu( array(
                                             'menu' => 'primary',
                                             'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto goo',
                                             'container' => '',
                                             'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
                                             'walker' => new wp_bootstrap4_navwalker()
-                                    ) ); ?>
-                                <?php endif; ?>
+                                    ) ); ?><?php endif; ?>
                                 <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
                                     <defs>
                                         <filter id="goo">
