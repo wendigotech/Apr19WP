@@ -126,6 +126,9 @@ body {
 
 .goo {
     background-color: #d8d4d4;
+    box-shadow: 0 16px 48px rgba(4,4,4,0.5);
+    font-family: Titillium Web;
+    font-size: 1vw;
 }
 
 .is-boxed {
@@ -138,4 +141,28 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+@media (min-width:768px) {
+    .nav-item.dropdown {
+        position: relative;
+
+        &:hover > .dropdown-menu {
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+
+.dropdown-menu {
+    text-align: center;
+}
+
+.dropdown-item {
+    font-family: Titillium Web;
+    font-size: 0.5vw;
+}
+
+.fixed-top.navbar-light.navbar-expand-md {
+    margin: 10;
 }
