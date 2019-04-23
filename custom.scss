@@ -122,10 +122,20 @@ a {
 
 body {
     padding: 7.5vh 100px 0 100px;
-    font-family: var(--font);
-    background: var(--color-bg);
 }
 
 .goo {
     background-color: #d8d4d4;
+}
+
+.is-boxed {
+    background: rgba(212, 194, 194, 0.98);
+}
+
+.body-wrap {
+    background: rgba(216, 213, 213, 0.96);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
