@@ -77,7 +77,7 @@
                             <div class="collapse navbar-collapse" id="navbarToggler20"> 
                                 <?php if ( has_nav_menu( 'primary' ) ) : ?><?php wp_nav_menu( array(
                                             'menu' => 'primary',
-                                            'menu_class' => 'navbar-nav ml-auto goo mt-lg-auto mt-auto',
+                                            'menu_class' => 'navbar-nav mt-lg-auto ml-auto goo',
                                             'container' => '',
                                             'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
                                             'walker' => new wp_bootstrap4_navwalker()
