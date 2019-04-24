@@ -136,6 +136,13 @@ body {
     border: 9px solid rgba(255, 255, 255, 0.55);
 }
 
+@media (max-width:640px) {
+    .is-boxed {
+        background: rgba(212, 194, 194, 0.98);
+        padding: 7.5vh 10px 0 10px;
+    }
+}
+
 .is-boxed {
     background: rgba(212, 194, 194, 0.98);
 }
