@@ -184,6 +184,12 @@ body {
     }
 }
 
+@media (max-width: 767px) {
+    .dropdown-menu {
+        display: block;
+    }
+}
+
 .dropdown-menu {
     text-align: center;
 }
