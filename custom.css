@@ -1,7 +1,15 @@
 a {
     text-decoration: none;
-    color: #3f20df;
-    font-family: Titillium Web;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
+    background-image: -webkit-linear-gradient(currentColor, currentColor);
+    background-image: -o-linear-gradient(currentColor, currentColor);
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    -webkit-transition: background-size .3s;
+    -o-transition: background-size .3s;
+    transition: background-size .3s;
 }
 
 /*&:hover {
@@ -138,6 +146,8 @@ body {
     box-shadow: 0 16px 48px rgba(4, 4, 4, 0.5);
     font-family: Titillium Web;
     font-size: 1vw;
+    border-radius: 34px;
+    border: 10px solid rgba(255, 255, 255, 0.55);
 }
 
 .is-boxed {
@@ -174,7 +184,7 @@ body {
 
 .dropdown-item {
     font-family: Titillium Web;
-    font-size: 0.5vw;
+    font-size: 0.8vw;
 }
 
 .fixed-top.navbar-light.navbar-expand-md {
