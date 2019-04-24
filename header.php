@@ -82,15 +82,7 @@
                                             'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
                                             'walker' => new wp_bootstrap4_navwalker()
                                     ) ); ?><?php endif; ?>
-                                <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                    <defs>
-                                        <filter id="goo">
-                                            <fegaussianblur in="SourceGraphic" stddeviation="10" result="blur"/> 
-                                            <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"/>
-                                            <fecomposite in="SourceGraphic" in2="goo" operator="atop"/>
-                                        </filter>
-                                    </defs>
-                                </svg>                                                                  
+                                                                                                  
                             </div>                             
                         </nav>
                 </div><?php if ( is_active_sidebar( 'sidebar1' ) ) : ?><div class="col-md-12"><?php dynamic_sidebar( 'sidebar1' ); ?></div><?php endif; ?>
