@@ -39,7 +39,7 @@
                     <div class="brand footer-brand">
                         <a href="<?php echo esc_url( get_home_url() ); ?>">
 							<svg width="70" height="70" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-								<title><?php _e( 'Florence', 'Apr19' ); ?></title>
+								
 								<defs>
 									<lineargradient x1="100%" y1="0%" x2="0%" y2="100%" id="logo-footer-a">
 										<stop stop-color="#FFF" stop-opacity=".48" offset="0%"/>
