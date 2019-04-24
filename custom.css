@@ -146,8 +146,8 @@ body {
     box-shadow: 0 16px 48px rgba(4, 4, 4, 0.5);
     font-family: Titillium Web;
     font-size: 1vw;
-    border-radius: 34px;
-    border: 10px solid rgba(255, 255, 255, 0.55);
+    border-radius: 35px;
+    border: 9px solid rgba(255, 255, 255, 0.55);
 }
 
 .is-boxed {
