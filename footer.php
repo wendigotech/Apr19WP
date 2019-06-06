@@ -73,22 +73,17 @@
                         <ul class="footer-social-links list-reset">
                             <li>
                                 <a href="<?php echo get_theme_mod( 'footer_img1_link', '#' ); ?>">
-                                    <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img1', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" width="80">
+                                    <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img1', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" width="120">
                                 </a>
                             </li>
                             <li>
                                 <a href="<?php echo get_theme_mod( 'footer_img2_link', '#' ); ?>">
-                                    <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img2', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" width="80">
+                                    <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img2', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" width="120">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img3', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" width="80">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img4', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" width="80">
+                                    <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img3', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" width="120">
                                 </a>
                             </li>
                         </ul>

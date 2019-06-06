@@ -175,18 +175,6 @@ function Apr19_customize_register( $wp_customize ) {
         'section' => 'footer_section'
     ) ) );
 
-    $wp_customize->add_setting( 'footer_img4', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img4', array(
-        'label' => __( 'Image 4', 'Apr19' ),
-        'type' => 'media',
-        'mime_type' => 'image',
-        'section' => 'footer_section'
-    ) ) );
-
     $wp_customize->add_setting( 'footer_text', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize
