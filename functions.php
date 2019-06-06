@@ -117,6 +117,17 @@ function Apr19_customize_register( $wp_customize ) {
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
 
+    $wp_customize->add_setting( 'footer_img1_link', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_img1_link', array(
+        'label' => __( 'Image 1 Link', 'Apr19' ),
+        'type' => 'url',
+        'section' => 'footer_section'
+    ));
+
     $wp_customize->add_setting( 'footer_img1', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize

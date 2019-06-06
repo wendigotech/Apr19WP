@@ -60,8 +60,8 @@
                             <ul class="footer-links list-reset">
                                 <?php
                                     PG_Smart_Walker_Nav_Menu::$options['template'] = '<li id="{ID}" class="{CLASSES}">
-                                                                <a {ATTRS}>{TITLE}</a>
-                                                            </li>';
+                                                                    <a {ATTRS}>{TITLE}</a>
+                                                                </li>';
                                     wp_nav_menu( array(
                                         'menu' => 'secondary',
                                         'container' => '',
@@ -72,7 +72,7 @@
                         <?php endif; ?>
                         <ul class="footer-social-links list-reset">
                             <li>
-                                <a href="#">
+                                <a href="<?php echo get_theme_mod( 'footer_img1_link', '#' ); ?>">
                                     <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_img1', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" width="80">
                                 </a>
                             </li>
