@@ -163,6 +163,17 @@ function Apr19_customize_register( $wp_customize ) {
         'section' => 'footer_section'
     ) ) );
 
+    $wp_customize->add_setting( 'footer_img3_link', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_img3_link', array(
+        'label' => __( 'Image 3 Link', 'Apr19' ),
+        'type' => 'url',
+        'section' => 'footer_section'
+    ));
+
     $wp_customize->add_setting( 'footer_img3', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize
