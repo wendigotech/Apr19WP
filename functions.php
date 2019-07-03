@@ -275,11 +275,11 @@ if ( ! function_exists( 'Apr19_enqueue_scripts' ) ) :
     wp_deregister_style( 'all' );
     wp_enqueue_style( 'all', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css', false, null, 'all');
 
-    wp_deregister_style( 'style' );
-    wp_enqueue_style( 'style', get_template_directory_uri() . '/dist/css/style.css', false, null, 'all');
-
     wp_deregister_style( 'custom' );
     wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css', false, null, 'all');
+
+    wp_deregister_style( 'style' );
+    wp_enqueue_style( 'style', get_template_directory_uri() . '/dist/css/style.css', false, null, 'all');
 
     wp_deregister_style( 'style-1' );
     wp_enqueue_style( 'style-1', get_bloginfo('stylesheet_url'), false, null, 'all');
