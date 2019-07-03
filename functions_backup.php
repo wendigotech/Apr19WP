@@ -31,20 +31,6 @@ function Apr19_setup() {
         'social'  => __( 'Social Links Menu', 'Apr19' ),
     ) );
 
-/*
-     * Register custom menu locations
-     */
-    /* Pinegrow generated Register Menus Begin */
-
-    /* Pinegrow generated Register Menus End */
-    
-/*
-    * Set image sizes
-     */
-    /* Pinegrow generated Image sizes Begin */
-
-    /* Pinegrow generated Image sizes End */
-    
     /*
      * Switch default core markup for search form, comment form, and comments
      * to output valid HTML5.
@@ -59,11 +45,6 @@ function Apr19_setup() {
     add_theme_support( 'post-formats', array(
         'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
     ) );
-
-    /*
-     * Enable support for Page excerpts.
-     */
-     add_post_type_support( 'page', 'excerpt' );
 }
 endif; // Apr19_setup
 
@@ -97,23 +78,6 @@ function Apr19_init() {
 endif; // Apr19_setup
 
 add_action( 'init', 'Apr19_init' );
-
-
-if ( ! function_exists( 'Apr19_custom_image_sizes_names' ) ) :
-
-function Apr19_custom_image_sizes_names( $sizes ) {
-
-    /*
-     * Add names of custom image sizes.
-     */
-    /* Pinegrow generated Image Sizes Names Begin*/
-    /* This code will be replaced by returning names of custom image sizes. */
-    /* Pinegrow generated Image Sizes Names End */
-    return $sizes;
-}
-add_action( 'image_size_names_choose', 'Apr19_custom_image_sizes_names' );
-endif;// Apr19_custom_image_sizes_names
-
 
 
 if ( ! function_exists( 'Apr19_widgets_init' ) ) :
@@ -224,7 +188,6 @@ function Apr19_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'footer_text', array(
         'type' => 'theme_mod',
-        'default' => __( '&copy; 2018 Florence, all rights reserved', 'Apr19' ),
         'sanitize_callback' => $pgwp_sanitize
     ));
 
@@ -255,7 +218,9 @@ if ( ! function_exists( 'Apr19_enqueue_scripts' ) ) :
     wp_deregister_script( 'nav' );
     wp_enqueue_script( 'nav', get_template_directory_uri() . '/src/js/nav.min.js', false, null, true);
 
-    wp_enqueue_script( 'jquery' );
+    wp_deregister_script( 'jquery' );
+    wp_enqueue_script( 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js', false, null, true);
+
     wp_deregister_script( 'popper' );
     wp_enqueue_script( 'popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', false, null, true);
 
@@ -281,9 +246,6 @@ if ( ! function_exists( 'Apr19_enqueue_scripts' ) ) :
     wp_deregister_style( 'custom' );
     wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css', false, null, 'all');
 
-    wp_deregister_style( 'style-1' );
-    wp_enqueue_style( 'style-1', get_bloginfo('stylesheet_url'), false, null, 'all');
-
     /* Pinegrow generated Enqueue Styles End */
 
     }
@@ -295,7 +257,7 @@ function pgwp_sanitize_placeholder($input) { return $input; }
  * Resource files included by Pinegrow.
  */
 /* Pinegrow generated Include Resources Begin */
-require_once "inc/wp_pg_helpers.php";
+require_once "inc/bootstrap/wp_bootstrap4_navwalker.php";
 require_once "inc/wp_smart_navwalker.php";
 
     /* Pinegrow generated Include Resources End */
