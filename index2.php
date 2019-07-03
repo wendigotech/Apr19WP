@@ -1,11 +1,10 @@
-<?php
-get_header(); ?>
+<?php get_header(); ?>
 
 <section class="hero text-center">
     <div class="hero-disk hero-disk-3 is-moving-object is-translating" data-translating-factor="90">
         <svg width="600" height="300" viewbox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
             <defs>
-                <lineargradient x1="100%" y1="100%" x2="-1.265%" y2="100%" id="disk-3-a">
+                <linearGradient x1="100%" y1="100%" x2="-1.265%" y2="100%" id="disk-3-a">
                     <stop stop-color="#040404" stop-opacity="0" offset="0%"/>
                     <stop stop-color="#3217BB" offset="100%"/>
                 </linearGradient>
@@ -16,7 +15,7 @@ get_header(); ?>
     <div class="hero-disk hero-disk-4 is-moving-object is-translating" data-translating-factor="50">
         <svg width="600" height="300" viewbox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
             <defs>
-                <lineargradient x1="0%" y1="100%" y2="100%" id="disk-4-a">
+                <linearGradient x1="0%" y1="100%" y2="100%" id="disk-4-a">
                     <stop stop-color="#040404" stop-opacity="0" offset="0%"/>
                     <stop stop-color="#D15680" offset="100%"/>
                 </linearGradient>
@@ -27,7 +26,7 @@ get_header(); ?>
     <div class="hero-sphere hero-sphere-2 is-moving-object is-translating" data-translating-factor="30">
         <svg width="32" height="32" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
             <defs>
-                <radialgradient cx="83.479%" cy="86.284%" fx="83.479%" fy="86.284%" r="128.926%" id="sphere-2-a">
+                <radialGradient cx="83.479%" cy="86.284%" fx="83.479%" fy="86.284%" r="128.926%" id="sphere-2-a">
                     <stop stop-color="#3217BB" offset="0%"/>
                     <stop stop-color="#040404" stop-opacity="0" offset="100%"/>
                 </radialGradient>
@@ -57,6 +56,7 @@ get_header(); ?>
                         <?php $slider = new WP_Query( $slider_args ); ?>
                         <?php if ( $slider->have_posts() ) : ?>
                             <?php while ( $slider->have_posts() ) : $slider->the_post(); ?>
+                                <?php PG_Helper::rememberShownPost(); ?>
                                 <div class="col-md-4">
                                     <h3><?php the_title(); ?></h3>
                                     <?php the_content(); ?> 

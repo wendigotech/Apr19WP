@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -8,12 +8,13 @@
         <?php wp_head(); ?>
     </head>
     <body class="is-boxed <?php echo implode(' ', get_body_class()); ?>">
+        <?php if( function_exists( 'wp_body_open' ) ) wp_body_open(); ?>
         <div class="body-wrap boxed-container">
             <header class="site-header">
                 <div class="hero-disk hero-disk-1 is-moving-object is-translating" data-translating-factor="60">
                     <svg width="600" height="300" viewbox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <lineargradient x1="-1.265%" y1="100%" y2="100%" id="disk-1-a">
+                            <linearGradient x1="-1.265%" y1="100%" y2="100%" id="disk-1-a">
                                 <stop stop-color="#040404" stop-opacity="0" offset="0%"/>
                                 <stop stop-color="#3217BB" offset="100%"/>
                             </linearGradient>
@@ -24,7 +25,7 @@
                 <div class="hero-disk hero-disk-2 is-moving-object is-translating" data-translating-factor="20">
                     <svg width="600" height="300" viewbox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <lineargradient x1="0%" y1="100%" y2="100%" id="disk-2-a">
+                            <linearGradient x1="0%" y1="100%" y2="100%" id="disk-2-a">
                                 <stop stop-color="#040404" stop-opacity="0" offset="0%"/>
                                 <stop stop-color="#D15680" offset="100%"/>
                             </linearGradient>
@@ -35,7 +36,7 @@
                 <div class="hero-sphere hero-sphere-1 is-moving-object is-translating" data-translating-factor="10">
                     <svg width="48" height="48" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <radialgradient cx="83.479%" cy="86.284%" fx="83.479%" fy="86.284%" r="128.926%" id="sphere-1-a">
+                            <radialGradient cx="83.479%" cy="86.284%" fx="83.479%" fy="86.284%" r="128.926%" id="sphere-1-a">
                                 <stop stop-color="#D15680" offset="0%"/>
                                 <stop stop-color="#040404" stop-opacity="0" offset="100%"/>
                             </radialGradient>
@@ -47,14 +48,13 @@
                     <div class="site-header-inner">
                         <nav class="navbar navbar-expand-lg fixed-top navbar-light"> 
                             <div class="brand header-brand">
-                                <h1 class="m-0"> <a href="<?php echo esc_url( get_home_url() ); ?>">
-                                        <svg width="70" height="70" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <h1 class="m-0"> <a href="<?php echo esc_url( get_home_url() ); ?>"> <svg width="70" height="70" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                             <defs>
-                                                <lineargradient x1="100%" y1="0%" x2="0%" y2="100%" id="logo-a">
+                                                <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="logo-a">
                                                     <stop stop-color="#FFF" stop-opacity=".48" offset="0%"/>
                                                     <stop stop-color="#FFF" offset="100%"/>
                                                 </linearGradient>
-                                                <lineargradient x1="21.021%" y1="8.197%" y2="50%" id="logo-b">
+                                                <linearGradient x1="21.021%" y1="8.197%" y2="50%" id="logo-b">
                                                     <stop stop-color="#3217BB" offset="0%"/>
                                                     <stop stop-color="#D15680" offset="100%"/>
                                                 </linearGradient>
@@ -63,20 +63,23 @@
                                                 <path d="M16 8h6a2 2 0 0 1 2 2v6h-6a2 2 0 0 1-2-2V8z" fill="url(#logo-a)"/>
                                                 <path d="M16 0v8a8 8 0 1 0 8 8h8c0 8.837-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0z" fill="url(#logo-b)"/>
                                             </g>
-                                        </svg>
-                                    </a> </h1>
+                                        </svg> </a> </h1>
                             </div>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler20" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> 
                                 <span class="navbar-toggler-icon"></span> 
                             </button>                             
                             <div class="collapse navbar-collapse" id="navbarToggler20"> 
                                 <?php if ( has_nav_menu( 'primary' ) ) : ?>
-                                    <?php wp_nav_menu( array(
-                                            'menu' => 'primary',
-                                            'menu_class' => 'navbar-nav mt-lg-auto ml-auto goo',
+                                    <?php
+                                        PG_Smart_Walker_Nav_Menu::$options['template'] = '<li class="nav-item {CLASSES}" id="{ID}"> 
+                                                                                <a class="nav-link" {ATTRS}>{TITLE}<span class="sr-only">(current)</span></a> 
+                                                                            </li>';
+                                        PG_Smart_Walker_Nav_Menu::$options['current_class'] = 'active';
+                                        wp_nav_menu( array(
                                             'container' => '',
-                                            'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
-                                            'walker' => new wp_bootstrap4_navwalker()
+                                            'theme_location' => 'primary',
+                                            'items_wrap' => '<ul class="navbar-nav mt-lg-auto ml-auto goo %2$s" id="%1$s">%3$s</ul>',
+                                            'walker' => new PG_Smart_Walker_Nav_Menu()
                                     ) ); ?>
                                 <?php endif; ?>
                             </div>                             
