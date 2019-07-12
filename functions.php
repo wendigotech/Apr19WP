@@ -281,9 +281,6 @@ if ( ! function_exists( 'Apr19_enqueue_scripts' ) ) :
     wp_deregister_style( 'custom' );
     wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css', false, null, 'all');
 
-    wp_deregister_style( 'style-1' );
-    wp_enqueue_style( 'style-1', get_bloginfo('stylesheet_url'), false, null, 'all');
-
     /* Pinegrow generated Enqueue Styles End */
 
     }
